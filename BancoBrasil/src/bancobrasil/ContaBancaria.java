@@ -9,13 +9,22 @@ public class ContaBancaria {
     String proprietario;
     
     //Metodos(Comportamentos) da Classe
-    void depositar(){}
+    void depositar(double valor){//método com parametro
+        this.saldo += valor;
+    }
     
-    void sacar(){}
+    void sacar(double valor){
+        if(valor > this.saldo)
+            System.out.println("Saldo insulficiente!");
+        else
+            this.saldo -= valor;
+    }
     
     void transferir(){}
     
-    String consultarSaldo(){
-        return "";
+    String consultarSaldo(){//método sem parametro
+        //String.format() metodo da classe String para ultilizar formatação
+       //com identificadores(&d, &f, &s).
+        return String.format("seu saldo é: R$ %.2f",this.saldo);
     }
 }

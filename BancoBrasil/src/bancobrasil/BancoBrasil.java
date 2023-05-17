@@ -27,20 +27,25 @@ public class BancoBrasil {
         */
        
         Scanner scan = new Scanner(System.in);
-        System.out.println("BEM VINDO AO BANCO DP BRASIL");
+        System.out.println("BEM VINDO AO BANCO DO BRASIL");
         System.out.println("CADASTRO DE CONTAS");
         System.out.println("Digite a agencia ->");
         contaBancaria1.agencia = scan.next();
-        System.out.println("Digite a conta ->");
+        System.out.println("\nDigite a conta ->");
         contaBancaria1.conta = scan.next();
-        System.out.println("Digite o proprietario ->");
+        System.out.println("\nDigite o proprietario ->");
         contaBancaria1.proprietario = scan.next();
-        System.out.println("Digite o Saldo Inicial ->");
-        contaBancaria1.saldo = scan.nextDouble();
+        System.out.println("\nDigite o valor de deposito ->");
+        contaBancaria1.depositar(scan.nextDouble());
         
         System.out.println(contaBancaria1.agencia + "\n" 
                + contaBancaria1.conta +"\n" 
                + contaBancaria1.proprietario + "\n" 
-               + contaBancaria1.saldo);
+               + contaBancaria1.consultarSaldo());
+        
+        System.out.println("\n\nDigite o valor para saque -> ");
+        contaBancaria1.sacar(scan.nextDouble());
+        
+        System.out.println(contaBancaria1.consultarSaldo());
     } 
 }
