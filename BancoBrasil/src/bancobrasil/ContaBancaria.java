@@ -15,12 +15,20 @@ public class ContaBancaria {
     
     void sacar(double valor){
         if(valor > this.saldo)
-            System.out.println("Saldo insulficiente!");
+            System.out.println("Saldo insuficiente!");
         else
             this.saldo -= valor;
     }
     
-    void transferir(){}
+    void transferir(ContaBancaria contabancaria, double valor){//método com parametro
+        if(valor <= saldo){
+           this.sacar(valor);
+            contabancaria.saldo += valor;
+        }else {
+            System.out.println("Saldo Insuficiente!");
+        }
+           
+    }
     
     String consultarSaldo(){//método sem parametro
         //String.format() metodo da classe String para ultilizar formatação
