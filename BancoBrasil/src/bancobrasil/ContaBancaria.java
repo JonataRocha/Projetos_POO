@@ -6,7 +6,7 @@ public class ContaBancaria {
     String agencia;
     String conta;
     double saldo;
-    String proprietario;
+    Usuario proprietario;
     
     //Metodos(Comportamentos) da Classe
     void depositar(double valor){//método com parametro
