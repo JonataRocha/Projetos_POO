@@ -1,4 +1,3 @@
- 
 package bancobrasil;
 
 import java.util.Scanner;
@@ -8,11 +7,11 @@ public class BancoBrasil {
     public static void main(String[] args) {
         /*Instanciando um Objeto do tipo conta bancaria e referenciando 
         nas variaveis contaBancaria1 e contaBancaria2*/
-        
-       ContaBancaria contaBancaria1 = new ContaBancaria();
-       ContaBancaria contaBancaria2 = new ContaBancaria();
-       Usuario user1 = new Usuario();
-       /*
+
+        ContaBancaria contaBancaria1 = new ContaBancaria();
+        ContaBancaria contaBancaria2 = new ContaBancaria();
+        Usuario user1 = new Usuario();
+        /*
        //Tribuindo valores ao nosso ojeto
        contaBancaria1.agencia = "0001";
        contaBancaria1.conta = "12345";
@@ -25,8 +24,8 @@ public class BancoBrasil {
                + contaBancaria1.proprietario + "\n" 
                + contaBancaria1.saldo);
         
-        */
-       
+         */
+
         Scanner scan = new Scanner(System.in);
         System.out.println("BEM VINDO AO BANCO DO BRASIL");
         System.out.println("CADASTRO DE CONTAS");
@@ -43,18 +42,18 @@ public class BancoBrasil {
         System.out.println("Digite o Telefone do Cliente");
         user1.telefone = scan.next();
         contaBancaria1.proprietario = user1;
-        
+
         System.out.println("\nDigite o valor de deposito ->");
         contaBancaria1.depositar(scan.nextDouble());
-        
-        System.out.println(contaBancaria1.agencia + "\n" 
-               + contaBancaria1.conta +"\n" 
-               + contaBancaria1.proprietario.imprimirInfor() + "\n" 
-               + contaBancaria1.consultarSaldo());
-        
+
+        System.out.println(contaBancaria1.agencia + "\n"
+                + contaBancaria1.conta + "\n"
+                + contaBancaria1.proprietario.imprimirInfor() + "\n"
+                + contaBancaria1.consultarSaldo());
+
         System.out.println("\n\nDigite o valor para saque -> ");
         contaBancaria1.sacar(scan.nextDouble());
-        
+
         System.out.println(contaBancaria1.consultarSaldo());
-    } 
+    }
 }
