@@ -31,16 +31,16 @@ public class Usuario {
         return this.sobrenome;
     }
 
-    public void setsobreNome(String s) {
-        this.sobrenome = s;
+    public void setsobreNome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public String gettelefone() {
         return this.telefone;
     }
 
-    public void settelefone(String t) {
-        this.telefone = t;
+    public void settelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public Date getdataRegistro() {

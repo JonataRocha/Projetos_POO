@@ -11,43 +11,43 @@ public class ContaBancaria {
     public ContaBancaria() {
     }
 //MÉTODO CONSTRUTOR
-    public ContaBancaria(String a, String c, double s, Usuario p) {
-        this.agencia = a;
-        this.conta = c;
-        this.saldo = s;
-        this.proprietario = p;
+    public ContaBancaria(String agencia, String conta, double saldo, Usuario proprietario) {
+        this.agencia = agencia;
+        this.conta = conta;
+        this.saldo = saldo;
+        this.proprietario = proprietario;
     }
 //MÉTODOS GETTERS & SETTERS
     public String getagencia() {
         return this.agencia;
     }
 
-    public void setagencia(String a) {
-        this.agencia = a;
+    public void setagencia(String agencia) {
+        this.agencia = agencia;
     }
 
     public String getconta() {
         return this.conta;
     }
 
-    public void setconta(String c) {
-        this.conta = c;
+    public void setconta(String conta) {
+        this.conta = conta;
     }
 
     public double getsaldo() {
         return this.saldo;
     }
 
-    public void setsaldo(double s) {
-        this.saldo = s;
+    public void setsaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public Usuario getproprietario() {
         return this.proprietario;
     }
 
-    public void setproprietario(Usuario p) {
-        this.proprietario = p;
+    public void setproprietario(Usuario proprietario) {
+        this.proprietario = proprietario;
     }
 }
 
