@@ -11,6 +11,7 @@ public class Usuario {
 
     public Usuario() {
     }
+
     //MÉTODO CONSTRUTOR
     public Usuario(String nome, String sobrenome, String telefone) {
         this.nome = nome;
@@ -18,6 +19,7 @@ public class Usuario {
         this.telefone = telefone;
         this.dataRegistro = new Date();
     }
+
     //Métodos GETTERS & SETTERS
     public String getnome() {
         return this.nome;
@@ -52,10 +54,10 @@ public class Usuario {
     }
 }
 
-String imprimirInfor(){
+/*String imprimirInfor(){
        return String.format("------INFORMAÇÕE DO CLIENTE------\n Nome: %s\n Sobrenome: %s\n Telefone: %s\n Data Registro: %s\n"
                + "----------------------------------",
                this.nome, this.sobreNome, this.telefone, this.dataRegistro);
     }
     
-}
+}*/

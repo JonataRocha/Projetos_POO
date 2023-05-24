@@ -7,11 +7,11 @@ public class BancoBrasil {
     public static void main(String[] args) {
         /*Instanciando um Objeto do tipo conta bancaria e referenciando 
         nas variaveis contaBancaria1 e contaBancaria2*/
- /*
+
         ContaBancaria contaBancaria1 = new ContaBancaria();
         ContaBancaria contaBancaria2 = new ContaBancaria();
-        Usuario user1 = new Usuario();*/
- /*
+        Usuario user1 = new Usuario();
+        /*
        //Tribuindo valores ao nosso ojeto
        contaBancaria1.agencia = "0001";
        contaBancaria1.conta = "12345";
@@ -86,27 +86,34 @@ public class BancoBrasil {
                         users[i] = user;
                     }
                     break;
+
                 case 2:
-                    if(users[0] == null){
-                        System.out.println("Não existe Cliente cadastrado!");
-                        break;
-                    }
                     System.out.println("***CADASTRO DE CONTA***");
                     System.out.println("Agencia: ");
                     contabancaria.setagencia(scan.next());
                     System.out.println("Conta: ");
                     contabancaria.setconta(scan.next());
                     System.out.println("CLIENTES CADASTRADO");
-                    for (int i = 0; i < 5; i++) {
-                        //System.out.println("\n"+(i+1) + "- " + users[i].getnome());
-                        System.out.printf("\n%d- %s %s", (i+1), users[i].getnome(), users[i].getsobreNome(),"\n");
+                    if (users[0] != null) {
+                        for (int i = 0; i < 5; i++) {
+                            System.out.printf("\n%d- %s %s", (i + 1), users[i].getnome(), users[i].getsobreNome(), "\n");
+                        }
+
+                        System.out.println("\nSelecione o cliente: ");
+                        int userOpcao = scan.nextInt();
+                        contabancaria.setproprietario(users[userOpcao - 1]);
+                    } else {
+                        System.out.println("Nenhum Cliente Cadastrado");
                     }
-                    System.out.println("\nSelecione o cliente: ");
-                    int userOpcao = scan.nextInt();
-                    if (userOpcao <= 5 && userOpcao > 0) {
-                        userOpcao--;
-                        contabancaria.setproprietario(users[userOpcao]);
-                    }
+                    
+                    
+                    System.out.println("\nDigite o valor de deposito ->");
+                    contaBancaria1.setsaldo(scan.nextDouble());
+                    System.out.println(contaBancaria1.getagencia() + "\n"
+                            + contaBancaria1.getconta() + "\n"
+                            + contaBancaria1.getproprietario().getnome() + "\n"
+                            + contaBancaria1.getsaldo());
+                    
                     break;
                 case 3:
                     System.out.println("***ATÉ BREVE!***");
