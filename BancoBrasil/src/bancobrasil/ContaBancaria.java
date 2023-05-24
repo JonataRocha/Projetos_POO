@@ -11,6 +11,7 @@ public class ContaBancaria {
     public ContaBancaria() {
     }
 //MÉTODO CONSTRUTOR
+
     public ContaBancaria(String agencia, String conta, double saldo, Usuario proprietario) {
         this.agencia = agencia;
         this.conta = conta;
@@ -18,6 +19,7 @@ public class ContaBancaria {
         this.proprietario = proprietario;
     }
 //MÉTODOS GETTERS & SETTERS
+
     public String getagencia() {
         return this.agencia;
     }
@@ -49,33 +51,33 @@ public class ContaBancaria {
     public void setproprietario(Usuario proprietario) {
         this.proprietario = proprietario;
     }
-}
 
 //Metodos(Comportamentos) da Classe
-void depositar(double valor){//método com parametro
+    void depositar(double valor) {//método com parametro
         this.saldo += valor;
     }
-    
-    void sacar(double valor){
-        if(valor > this.saldo)
+
+    void sacar(double valor) {
+        if (valor > this.saldo) {
             System.out.println("Saldo insuficiente!");
-        else
+        } else {
             this.saldo -= valor;
+        }
     }
-    
-    void transferir(ContaBancaria contabancaria, double valor){//método com parametro
-        if(valor <= saldo){
-           this.sacar(valor);
+
+    void transferir(ContaBancaria contabancaria, double valor) {//método com parametro
+        if (valor <= saldo) {
+            this.sacar(valor);
             contabancaria.saldo += valor;
-        }else {
+        } else {
             System.out.println("Saldo Insuficiente!");
         }
-           
+
     }
-    
-    String consultarSaldo(){//método sem parametro
+
+    String consultarSaldo() {//método sem parametro
         //String.format() metodo da classe String para ultilizar formatação
-       //com identificadores(&d, &f, &s).
-        return String.format("seu saldo é: R$ %.2f",this.saldo);
+        //com identificadores(&d, &f, &s).
+        return String.format("seu saldo é: R$ %.2f", this.saldo);
     }
 }

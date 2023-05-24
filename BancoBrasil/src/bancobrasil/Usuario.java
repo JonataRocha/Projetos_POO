@@ -7,7 +7,7 @@ public class Usuario {
     private String nome;
     private String sobrenome;
     private String telefone;
-    private Date dataRegistro = new Date();
+    
 
     public Usuario() {
     }
@@ -17,7 +17,6 @@ public class Usuario {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.telefone = telefone;
-        this.dataRegistro = new Date();
     }
 
     //Métodos GETTERS & SETTERS
@@ -45,19 +44,12 @@ public class Usuario {
         this.telefone = telefone;
     }
 
-    public Date getdataRegistro() {
-        return this.dataRegistro;
-    }
-
-    public void setdataRegistro(Date dr) {
-        this.dataRegistro = dr;
-    }
-}
-
-/*String imprimirInfor(){
-       return String.format("------INFORMAÇÕE DO CLIENTE------\n Nome: %s\n Sobrenome: %s\n Telefone: %s\n Data Registro: %s\n"
-               + "----------------------------------",
-               this.nome, this.sobreNome, this.telefone, this.dataRegistro);
-    }
     
-}*/
+
+
+    public String imprimirInfor() {
+       return String.format("------INFORMAÇÕE DO CLIENTE------\n Nome: %s\n Sobrenome: %s\n Telefone: %s\n ", 
+            this.nome, this.sobrenome, this.telefone);
+        }
+       
+}
