@@ -8,10 +8,7 @@ public class BancoBrasil {
     public static void main(String[] args) {
         /*Instanciando um Objeto do tipo conta bancaria e referenciando 
         nas variaveis contaBancaria1 e contaBancaria2*/
-
-        ContaBancaria contaBancaria1 = new ContaBancaria();
-        ContaBancaria contaBancaria2 = new ContaBancaria();
-        Usuario user1 = new Usuario();
+        //Usuario user1 = new Usuario() {};
         /*
        //Tribuindo valores ao nosso ojeto
        contaBancaria1.agencia = "0001";
@@ -134,12 +131,12 @@ public class BancoBrasil {
                     }
 
                     System.out.println("\nDigite o valor de deposito ->");
-                    contaBancaria1.depositar(scan.nextDouble());
+                    contabancaria.depositar(scan.nextDouble());
 
-                    System.out.println(contaBancaria1.getagencia() + "\n"
-                            + contaBancaria1.getconta() + "\n"
-                            + contaBancaria1.getproprietario().imprimirInfor() + "\n"
-                            + contaBancaria1.consultarSaldo());
+                    System.out.println(contabancaria.getagencia() + "\n"
+                            + contabancaria.getconta() + "\n"
+                            + contabancaria.getproprietario().imprimirInfor() + "\n"
+                            + contabancaria.consultarSaldo());
                     break;
                 case 3:
                     System.out.println("***ATÉ BREVE!***");
